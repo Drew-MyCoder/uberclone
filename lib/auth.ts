@@ -2,6 +2,18 @@ import * as SecureStore from 'expo-secure-store'
 import { Platform } from 'react-native'
 import { TokenCache } from '@clerk/clerk-expo/dist/cache'
 
+// async function testSecureStore() {
+//   try {
+//     await SecureStore.setItemAsync('test_key', 'test_value');
+//     const value = await SecureStore.getItemAsync('test_key');
+//     console.log('Retrieved from SecureStore:', value);
+//   } catch (error) {
+//     console.error('SecureStore error:', error);
+//   }
+// }
+
+// testSecureStore();
+
 const createTokenCache = (): TokenCache => {
   return {
     getToken: async (key: string) => {
